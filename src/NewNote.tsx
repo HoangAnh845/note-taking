@@ -1,11 +1,11 @@
-import { NoteData, Tag } from "./App"
-import { NoteForm } from "./NoteForm"
+import { NoteData, Tag } from "./App";
+import { NoteForm } from "./NoteForm";
 
 type NewNoteProps = {
-  onSubmit: (data: NoteData) => void
-  onAddTag: (tag: Tag) => void
-  availableTags: Tag[]
-}
+  onSubmit: (data: NoteData) => void; // ko trả về giá trị
+  onAddTag: (tag: Tag) => void;
+  availableTags: Tag[]; // Có sẵn
+};
 
 export function NewNote({ onSubmit, onAddTag, availableTags }: NewNoteProps) {
   return (
@@ -17,5 +17,5 @@ export function NewNote({ onSubmit, onAddTag, availableTags }: NewNoteProps) {
         availableTags={availableTags}
       />
     </>
-  )
+  );
 }
